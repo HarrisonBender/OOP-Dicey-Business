@@ -23,9 +23,24 @@ class Die {
     roll() {
         let numberGenerator = Math.floor((Math.random() * 6) + 1);
         this.value = numberGenerator;
-        this.div.innerText = numberGenerator;
+        this.getChar();
+        this.div.innerText = this.char;
     }
-    
+    getChar() {
+        if (this.value === 1) {
+            this.char = "⚀";
+        } else if (this.value === 2) {
+            this.char = "⚁"
+        } else if (this.value === 3) {
+            this.char = "⚂";
+        } else if (this.value === 4) {
+            this.char = "⚃";
+        } else if (this.value === 5) {
+            this.char = "⚄";
+        } else {
+            this.char = "⚅";
+        }
+    }
     
 }
 
